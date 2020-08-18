@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mirror.system</groupId>
+    <artifactId>mirror</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mirror</name>
+    <description>mirror system</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <druid.version>1.1.10</druid.version>
+        <swagger2.version>2.9.2</swagger2.version>
+        <spring-mybatis.version>2.1.2</spring-mybatis.version>
+        <mybatis-generator.version>1.3.7</mybatis-generator.version>
+        <mysql-connector.version>8.0.15</mysql-connector.version>
+        <lombok.version>1.18.12</lombok.version>
+        <fastjson.version>1.2.70</fastjson.version>
+        <jdom.version>1.1.3</jdom.version>
+        <jedis.version>2.9.0</jedis.version>
+        <okhttp.version>3.14.2</okhttp.version>
+        <activemq.version>5.15.10</activemq.version>
+        <docker.plugin.version>1.2.2</docker.plugin.version>
+        <docker.registry.url>localhost:5000</docker.registry.url>
+        <docker.image.prefix>${docker.registry.url}/dev</docker.image.prefix>
+    </properties>
+
+    <modules>
+        <module>mirror-backend</module>
+<!--        <module>mirror-gateway</module>-->
+        <module>mirror-util</module>
+        <module>mirror-mbg</module>
+<!--        <module>mirror-sms</module>-->
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring boot 2.2.6 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.6.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- spring cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring cloud alibaba 2.1.0.RELEASE -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- mybatis 启动依赖 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring-mybatis.version}</version>
+            </dependency>
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!-- jdom -->
+            <dependency>
+                <groupId>org.jdom</groupId>
+                <artifactId>jdom</artifactId>
+                <version>${jdom.version}</version>
+            </dependency>
+            <!-- jedis -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+            <!-- okhttp -->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
