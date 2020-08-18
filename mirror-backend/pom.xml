@@ -79,11 +79,11 @@
             </exclusions>
         </dependency>
         <!-- 引入子模块 -->
-<!--        <dependency>-->
-<!--            <groupId>com.platform.util</groupId>-->
-<!--            <artifactId>platform-util</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.mirror.util</groupId>
+            <artifactId>mirror-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.mirror.mbg</groupId>
             <artifactId>mirror-mbg</artifactId>
